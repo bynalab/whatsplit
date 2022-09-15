@@ -1,0 +1,43 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "whatsapp_trimmer",
+            "request": "launch",
+            "type": "dart"
+        },
+        {
+            "name": "whatsapp_trimmer (profile mode)",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "profile"
+        },
+        {
+            "name": "iPhone 13",
+            "request": "launch",
+            "type": "dart",
+            "deviceId": "D1D6D289-6486-4FEB-8745-9F820E7E5F53"
+        },
+        {
+            "name": "iPad mini (6th generation)",
+            "request": "launch",
+            "type": "dart",
+            "deviceId": "8EB2E35E-3B05-4A13-A64A-F45AFC41A494"
+        },
+        {
+            "name": "Bynadroid",
+            "request": "launch",
+            "type": "dart",
+            "deviceId": "emulator-5554"
+        },
+        {
+            "name": "Tecno CG7",
+            "request": "launch",
+            "type": "dart",
+            "deviceId": "0678625167101488"
+        },
+    ]
+}
