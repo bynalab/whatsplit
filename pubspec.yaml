@@ -1,4 +1,4 @@
-name: whatsapp_trimmer
+name: whatsplit
 description: A new Flutter project.
 
 # The following line prevents the package from being accidentally published to
@@ -15,16 +15,13 @@ dependencies:
   flutter:
     sdk: flutter
   video_trimmer: ^1.0.0
-  # video_editor: ^1.2.3
   multi_image_picker: ^4.8.01
   share_plus: ^3.0.4
-
   cupertino_icons: ^1.0.2
   helpers: ^1.1.4
   image_picker: ^0.8.4+5
   flutter_video_info: ^1.2.0
   google_fonts: ^3.0.1
-  splash_screen_view: ^3.0.0
 
 dev_dependencies:
   flutter_test:

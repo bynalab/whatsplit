@@ -2,7 +2,7 @@ import 'dart:io';
 import 'package:flutter/material.dart';
 import 'package:share_plus/share_plus.dart';
 import 'package:video_trimmer/video_trimmer.dart';
-import 'package:whatsapp_trimmer/methods.dart';
+import 'package:whatsplit/methods.dart';
 
 class TrimmerView extends StatefulWidget {
   final File file;

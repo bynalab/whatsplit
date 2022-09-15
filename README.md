@@ -1,4 +1,4 @@
-# whatsapp_trimmer
+# whatsplit
 
 A new Flutter project.
 

@@ -1,7 +1,7 @@
 import 'dart:io';
 import 'package:flutter_video_info/flutter_video_info.dart';
 import 'package:video_trimmer/video_trimmer.dart';
-import 'package:whatsapp_trimmer/util.dart';
+import 'package:whatsplit/util.dart';
 import 'package:path_provider/path_provider.dart';
 
 Future<VideoData?> getVideoInfo(File video) async {

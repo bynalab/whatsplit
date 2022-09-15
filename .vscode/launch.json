@@ -5,12 +5,12 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "name": "whatsapp_trimmer",
+            "name": "whatsplit",
             "request": "launch",
             "type": "dart"
         },
         {
-            "name": "whatsapp_trimmer (profile mode)",
+            "name": "whatsplit (profile mode)",
             "request": "launch",
             "type": "dart",
             "flutterMode": "profile"

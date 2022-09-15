@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:whatsapp_trimmer/main.dart';
+import 'package:whatsplit/main.dart';
 
 class SplashScreen extends StatefulWidget {
   static const id = 'splash_screen';

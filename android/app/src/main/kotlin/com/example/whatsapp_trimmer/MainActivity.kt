@@ -1,4 +1,4 @@
-package com.example.whatsapp_trimmer
+package com.example.whatsplit
 
 import io.flutter.embedding.android.FlutterActivity
 

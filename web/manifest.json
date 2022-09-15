@@ -1,6 +1,6 @@
 {
-    "name": "whatsapp_trimmer",
-    "short_name": "whatsapp_trimmer",
+    "name": "whatsplit",
+    "short_name": "whatsplit",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",

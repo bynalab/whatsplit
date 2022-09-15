@@ -2,8 +2,8 @@ import 'dart:io';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:image_picker/image_picker.dart';
-import 'package:whatsapp_trimmer/splash_screen.dart';
-import 'package:whatsapp_trimmer/trimmer_view.dart';
+import 'package:whatsplit/splash_screen.dart';
+import 'package:whatsplit/trimmer_view.dart';
 
 void main() {
   runApp(const MyApp());
