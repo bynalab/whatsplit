@@ -6,10 +6,10 @@
 > WhatSplit is a mobile application that help you upload video that are more than 30 seconds video to yours whatsapp status.
 
 ## 📸 ScreenShots
-|             Light Theme              |              Dark Theme              |
+
 | :----------------------------------: | :----------------------------------: |
-| ![](https://i.imgur.com/ipUdGyk.png) | ![](https://i.imgur.com/u1rCsZ8.png) |
-| ![](https://i.imgur.com/rujH2xz.png) | ![](https://i.imgur.com/gOx5T8H.png) |
+| ![](https://github.com/bynalab/whatsplit/blob/main/screenshots/1.png) | ![](https://github.com/bynalab/whatsplit/blob/main/screenshots/2.png) |
+| ![]https://github.com/bynalab/whatsplit/blob/main/screenshots/3.png) | ![](https://github.com/bynalab/whatsplit/blob/main/screenshots/1.png) |
 
 
 ## Authors
