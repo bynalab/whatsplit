@@ -7,9 +7,10 @@
 
 ## 📸 ScreenShots
 
-| :-----------------------------------------------------------: | :-----------------------------------------------------------: |
-| ![](github.com/bynalab/whatsplit/blob/main/screenshots/1.png) | ![](github.com/bynalab/whatsplit/blob/main/screenshots/2.png) |
-| ![](github.com/bynalab/whatsplit/blob/main/screenshots/3.png) | ![](github.com/bynalab/whatsplit/blob/main/screenshots/4.png) |
+![](https://github.com/bynalab/whatsplit/blob/main/screenshots/1.png) 
+![](https://github.com/bynalab/whatsplit/blob/main/screenshots/2.png)
+![](https://github.com/bynalab/whatsplit/blob/main/screenshots/3.png) 
+![](https://github.com/bynalab/whatsplit/blob/main/screenshots/4.png)
 
 
 ## Authors
