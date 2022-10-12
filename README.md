@@ -1,16 +1,24 @@
-# whatsplit
+<h1 align="center">Welcome WhatSplit 👋</h1>
+<p>
+  <img alt="Version" src="https://img.shields.io/badge/version-1.0-blue.svg?cacheSeconds=2592000" />
+</p>
 
-A new Flutter project.
+> WhatSplit is a mobile application that help you upload video that are more than 30 seconds video to yours whatsapp status.
 
-## Getting Started
+## 📸 ScreenShots
+|             Light Theme              |              Dark Theme              |
+| :----------------------------------: | :----------------------------------: |
+| ![](https://i.imgur.com/ipUdGyk.png) | ![](https://i.imgur.com/u1rCsZ8.png) |
+| ![](https://i.imgur.com/rujH2xz.png) | ![](https://i.imgur.com/gOx5T8H.png) |
 
-This project is a starting point for a Flutter application.
 
-A few resources to get you started if this is your first Flutter project:
+## Authors
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
+👤 **bynalab**
+👤 **j-kon**
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+* Github: [@bynalab](https://github.com/bynalab)
+* Github: [@j-kon](https://github.com/j-kon)
+
+## Show your support
+Give a ⭐️ if this project helped you!
