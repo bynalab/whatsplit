@@ -3,7 +3,7 @@
   <img alt="Version" src="https://img.shields.io/badge/version-1.0-blue.svg?cacheSeconds=2592000" />
 </p>
 
-> WhatSplit is a mobile application that help you upload video that are more than 30 seconds video to yours whatsapp status.
+> WhatSplit is a mobile application that help you split your video into chunks of defined duration. e.g WhatsApp status that only allows 30secs videos.
 
 ## 📸 ScreenShots
 
