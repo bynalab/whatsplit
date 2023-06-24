@@ -1,3 +1,5 @@
-void consolePrint(value, [key = 'BYNA']) {
-  print({key: value});
+import 'package:flutter/material.dart';
+
+void consolePrint(value, [key = 'SPLITTER']) {
+  debugPrint({key: value}.toString());
 }
