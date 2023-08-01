@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:whatsplit/main.dart';
+import 'package:whatsplit/trimmer.dart';
 
 class SplashScreen extends StatefulWidget {
   static const id = 'splash_screen';
@@ -24,6 +24,7 @@ class _SplashScreenState extends State<SplashScreen> {
   @override
   void initState() {
     super.initState();
+
     init();
   }
 
