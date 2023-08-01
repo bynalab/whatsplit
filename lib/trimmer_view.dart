@@ -1,6 +1,7 @@
 import 'dart:io';
 
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:video_trimmer/video_trimmer.dart';
 import 'package:whatsplit/app_strings.dart';
@@ -47,13 +48,27 @@ class _TrimmerViewState extends State<TrimmerView> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text(AppStrings.appName),
+        title: Text(
+          AppStrings.appName,
+          style: GoogleFonts.mateSc(
+            fontSize: 30,
+            fontWeight: FontWeight.bold,
+          ),
+        ),
+        backgroundColor: const Color(0xff487267),
+        elevation: 0,
+        centerTitle: true,
       ),
       body: Builder(
         builder: (context) => Center(
           child: Container(
             padding: const EdgeInsets.only(bottom: 30.0),
-            color: Colors.black,
+            decoration: const BoxDecoration(
+              image: DecorationImage(
+                  image: AssetImage('assets/background.png'),
+                  fit: BoxFit.cover),
+            ),
+            // color: Colors.black,
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               mainAxisSize: MainAxisSize.max,
@@ -64,7 +79,8 @@ class _TrimmerViewState extends State<TrimmerView> {
                     backgroundColor: Colors.red,
                   ),
                 ),
-                ElevatedButton(
+                const SizedBox(height: 5),
+                OutlinedButton(
                   onPressed: () async {
                     if (progressVisibility) {
                       return;
@@ -76,8 +92,28 @@ class _TrimmerViewState extends State<TrimmerView> {
 
                     setLoading(false);
                   },
-                  child: const Text(AppStrings.shareVideo),
+                  child: Text(
+                    AppStrings.shareVideo,
+                    style: GoogleFonts.mateSc(
+                        color: Colors.white,
+                        fontSize: 25,
+                        fontWeight: FontWeight.w400),
+                  ),
+                  style: ButtonStyle(
+                    side: MaterialStateProperty.all(
+                      const BorderSide(color: Colors.white, width: 4),
+                    ),
+                    backgroundColor: MaterialStateProperty.all(
+                      const Color(0xff487267),
+                    ),
+                    shape: MaterialStateProperty.all(
+                      RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(12),
+                      ),
+                    ),
+                  ),
                 ),
+                const SizedBox(height: 5),
                 Expanded(
                   child: VideoViewer(trimmer: trimmer),
                 ),
@@ -85,6 +121,9 @@ class _TrimmerViewState extends State<TrimmerView> {
                   child: TrimViewer(
                     trimmer: trimmer,
                     viewerHeight: 50.0,
+                    durationTextStyle: const TextStyle(
+                      color: Color(0xff487267),
+                    ),
                     viewerWidth: MediaQuery.of(context).size.width,
                     onChangeStart: (value) => startValue = value,
                     onChangeEnd: (value) => endValue = value,
@@ -96,8 +135,8 @@ class _TrimmerViewState extends State<TrimmerView> {
                 TextButton(
                   child: Icon(
                     isPlaying ? Icons.pause : Icons.play_arrow,
-                    size: 80.0,
-                    color: Colors.white,
+                    size: 100.0,
+                    color: const Color(0xff487267),
                   ),
                   onPressed: () async {
                     bool playbackState = await trimmer.videoPlaybackControl(
