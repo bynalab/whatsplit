@@ -4,6 +4,7 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:whatsplit/splash_screen.dart';
 import 'package:whatsplit/trimmer_view.dart';
+import 'package:whatsplit/util/util.dart';
 
 void main() {
   runApp(const MyApp());
@@ -34,13 +35,13 @@ class TrimmerApp extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: Text(
-          'WhatsTrim',
+          appTitle,
           style: GoogleFonts.mateSc(
             fontSize: 30,
             fontWeight: FontWeight.bold,
           ),
         ),
-        backgroundColor: const Color(0xff487267),
+        backgroundColor: AppColors.primaryColor,
         elevation: 0,
         centerTitle: true,
       ),
@@ -50,7 +51,7 @@ class TrimmerApp extends StatelessWidget {
           Container(
             decoration: const BoxDecoration(
               image: DecorationImage(
-                image: AssetImage('assets/background.png'),
+                image: AssetImage(AppImages.backgroundImage),
                 fit: BoxFit.cover,
               ),
             ),
@@ -58,7 +59,7 @@ class TrimmerApp extends StatelessWidget {
           const Padding(
             padding: EdgeInsets.only(top: 40, left: 40),
             child: Text(
-              'Hi!',
+              hi,
               style: TextStyle(
                 fontSize: 150,
                 fontFamily: 'Selima',
@@ -75,7 +76,7 @@ class TrimmerApp extends StatelessWidget {
               height: 70,
               child: OutlinedButton(
                 child: Text(
-                  'Load Video',
+                  loadVideo,
                   style: GoogleFonts.mateSc(
                     color: Colors.white,
                     fontSize: 30,
@@ -87,7 +88,7 @@ class TrimmerApp extends StatelessWidget {
                     const BorderSide(color: Colors.white, width: 4),
                   ),
                   backgroundColor: MaterialStateProperty.all(
-                    const Color(0xff487267),
+                    AppColors.primaryColor,
                   ),
                   shape: MaterialStateProperty.all(
                     RoundedRectangleBorder(
@@ -115,7 +116,7 @@ class TrimmerApp extends StatelessWidget {
             left: 20,
             right: 10,
             child: Text(
-              'Load more than 30sec video, and save yourself trimming and cutting.',
+              note,
               style: TextStyle(
                 fontSize: 80,
                 fontWeight: FontWeight.w900,
