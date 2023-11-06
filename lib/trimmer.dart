@@ -90,13 +90,13 @@ class TrimmerApp extends StatelessWidget {
             ),
           ),
           const Positioned(
-            bottom: 100,
+            top: 350,
             left: 20,
-            right: 10,
+            right: 20,
             child: Text(
               AppStrings.appDescription,
               style: TextStyle(
-                fontSize: 80,
+                fontSize: 50,
                 fontWeight: FontWeight.w900,
                 fontFamily: 'Selima',
               ),
