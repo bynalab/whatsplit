@@ -1,0 +1,10 @@
+[
+    {
+        "language": "en-GB",
+        "text": "- Testing release_notes.json function in codemagic \n- Seeing if it works at expected \n- Bump version"
+    },
+    {
+        "language": "en-US",
+        "text": "- Testing release_notes.json function in codemagic \n- Seeing if it works at expected \n- Bump version"
+    }
+]
