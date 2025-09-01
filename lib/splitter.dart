@@ -1,6 +1,5 @@
 import 'dart:io';
 import 'package:flutter_video_info/flutter_video_info.dart';
-import 'package:image_picker/image_picker.dart';
 import 'package:share_plus/share_plus.dart';
 import 'package:video_trimmer/video_trimmer.dart';
 import 'package:whatsplit/util.dart';
@@ -58,7 +57,12 @@ class Splitter {
     await Future.delayed(const Duration(seconds: 1));
 
     if (files.isNotEmpty) {
-      await Share.shareXFiles(files);
+      await SharePlus.instance.share(
+        ShareParams(
+          files: files,
+          text: 'Check out this video',
+        ),
+      );
     }
   }
 

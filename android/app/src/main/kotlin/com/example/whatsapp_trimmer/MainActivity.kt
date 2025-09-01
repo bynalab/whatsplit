@@ -1,4 +1,4 @@
-package com.example.whatsplit
+package com.bynalab.whatsplit
 
 import io.flutter.embedding.android.FlutterActivity
 
