@@ -2,6 +2,7 @@ import 'dart:io';
 
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:flutter/services.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:video_trimmer/video_trimmer.dart';
 import 'package:whatsplit/app_strings.dart';
@@ -26,6 +27,7 @@ class _TrimmerViewState extends State<TrimmerView> {
   bool isPlaying = false;
   bool progressVisibility = false;
   final List<XFile> files = [];
+  final TextEditingController durationController = TextEditingController(text: '30');
 
   void setLoading(bool status) {
     setState(() => progressVisibility = status);
@@ -42,6 +44,12 @@ class _TrimmerViewState extends State<TrimmerView> {
     super.initState();
 
     loadVideo();
+  }
+
+  @override
+  void dispose() {
+    durationController.dispose();
+    super.dispose();
   }
 
   @override
@@ -80,6 +88,52 @@ class _TrimmerViewState extends State<TrimmerView> {
                   ),
                 ),
                 const SizedBox(height: 5),
+                Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 24.0),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: <Widget>[
+                      const Text(
+                        'Segment (sec): ',
+                        style: TextStyle(
+                          color: Color(0xff487267),
+                          fontSize: 16,
+                          fontWeight: FontWeight.w600,
+                        ),
+                      ),
+                      const SizedBox(width: 8),
+                      SizedBox(
+                        width: 100,
+                        height: 40,
+                        child: TextField(
+                          controller: durationController,
+                          keyboardType: TextInputType.number,
+                          inputFormatters: [
+                            FilteringTextInputFormatter.digitsOnly,
+                          ],
+                          textAlign: TextAlign.center,
+                          style: const TextStyle(
+                            color: Color(0xff487267),
+                            fontSize: 16,
+                            fontWeight: FontWeight.w600,
+                          ),
+                          decoration: const InputDecoration(
+                            contentPadding: EdgeInsets.symmetric(vertical: 8),
+                            isDense: true,
+                            hintText: '30',
+                            enabledBorder: OutlineInputBorder(
+                              borderSide: BorderSide(color: Color(0xff487267), width: 2),
+                            ),
+                            focusedBorder: OutlineInputBorder(
+                              borderSide: BorderSide(color: Color(0xff487267), width: 2),
+                            ),
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+                const SizedBox(height: 10),
                 OutlinedButton(
                   onPressed: () async {
                     if (progressVisibility) {
@@ -88,7 +142,14 @@ class _TrimmerViewState extends State<TrimmerView> {
 
                     setLoading(true);
 
-                    await splitter.saveAndShare(widget.file, files);
+                    final parsed = int.tryParse(durationController.text);
+                    final segmentSec = (parsed == null || parsed <= 0) ? 30 : parsed;
+
+                    await splitter.saveAndShare(
+                      widget.file,
+                      files,
+                      segmentSeconds: segmentSec,
+                    );
 
                     setLoading(false);
                   },
