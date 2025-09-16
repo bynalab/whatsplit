@@ -29,16 +29,24 @@ class Splitter {
     return Duration(seconds: sec).inMilliseconds.toDouble();
   }
 
-  Future<void> saveAndShare(XFile file, List<XFile> files) async {
+  Future<void> saveAndShare(
+    XFile file,
+    List<XFile> files, {
+    int segmentSeconds = 30,
+  }) async {
     await clearStorage(folder);
     files.clear();
 
-    final totalVideoSeconds = await getVideoDuration(file);
-    final cut = toMilliseconds(30);
+    if (segmentSeconds <= 0) {
+      segmentSeconds = 30;
+    }
 
-    for (double i = 0; i < totalVideoSeconds; i += cut) {
+    final totalVideoMs = await getVideoDuration(file);
+    final cut = toMilliseconds(segmentSeconds);
+
+    for (double i = 0; i < totalVideoMs; i += cut) {
       final startValue = i;
-      final endValue = i + cut;
+      final endValue = (i + cut) > totalVideoMs ? totalVideoMs : (i + cut);
 
       await trimmer.saveTrimmedVideo(
         startValue: startValue,
